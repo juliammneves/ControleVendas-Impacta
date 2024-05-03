@@ -19,4 +19,29 @@ html {
 
 body {
   margin-bottom: 60px;
+  background: #f2f6fc;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.bg-gradient-primary-to-secondary {
+    background-color: #0061f2 !important;
+    background-image: linear-gradient(135deg, #0061f2 0%, rgba(105, 0, 199, .8) 100%) !important;
+    padding-top: 20px;
+    color: white;
+    height: 225px;
+}
+table, .bloco {
+    margin-top: -4rem !important;
+    padding: 20px;
+    border-radius: 20px;
+}
+.p-20{
+    padding: 20px;
+}
+
+.text-gray {
+    color: #ffffff80;
 }

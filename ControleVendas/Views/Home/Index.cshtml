@@ -2,7 +2,22 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="bg-gradient-primary-to-secondary">
+    <div class="container">
+        <h1 class="display-5 mt-2 mb-2 fw-bold text-white"><i class="bi bi-transparency text-gray me-3"></i>Bem-vindo(a)!</h1>
+        <p class="col-8 text-gray">Nosso sistema foi projetado para simplificar e otimizar o processo de vendas da sua empresa, proporcionando uma plataforma intuitiva e eficiente para gerenciar funcionários, produtos, clientes e vendas.<span class="text-white"> Nossos principais recursos <i class="bi bi-arrow-down"></i></span></p>
+    </div>
+
+
+</div>
+
+<div class="container bg-white bloco w-75">
+    <div class="row d-flex align-items-center justify-content-between">
+        <div class="col">
+            <h2 class="fw-bold text-primary">Gerenciamento de Funcionários</h2>
+            <p class="col-8">Cadastre, acompanhe e gerencie os dados dos seus funcionários de forma fácil e organizada. Atribua diferentes níveis de acesso para garantir a segurança das informações.</p>
+        </div>
+        <a class="col-1" asp-area="" asp-controller="Funcionarios" asp-action="Index"><i class="bi bi-arrow-up-right-circle text-primary display-2"></i></a>
+    </div>
+
 </div>

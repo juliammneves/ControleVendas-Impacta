@@ -3,63 +3,65 @@
 @{
     ViewData["Title"] = "Create";
 }
+<div class="container my-2">
+    <h1>Criar</h1>
 
-<h1>Criar</h1>
-
-<h4>Venda</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="FuncionarioID" class="control-label"></label>
-                <input asp-for="FuncionarioID" class="form-control" />
-                <span asp-validation-for="FuncionarioID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ClienteID" class="control-label"></label>
-                <input asp-for="ClienteID" class="form-control" />
-                <span asp-validation-for="ClienteID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DataVenda" class="control-label"></label>
-                <input asp-for="DataVenda" class="form-control" />
-                <span asp-validation-for="DataVenda" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TotalVenda" class="control-label"></label>
-                <input asp-for="TotalVenda" class="form-control" />
-                <span asp-validation-for="TotalVenda" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MetodoPagamento" class="control-label"></label>
-                <input asp-for="MetodoPagamento" class="form-control" />
-                <span asp-validation-for="MetodoPagamento" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="StatusEntrega" class="control-label"></label>
-                <select asp-for="StatusEntrega" class="form-control" />
+    <h4>Venda</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create" class="bg-white border border-light-subtle rounded-3 p-20">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label asp-for="FuncionarioID" class="control-label"></label>
+                        <input asp-for="FuncionarioID" class="form-control" />
+                        <span asp-validation-for="FuncionarioID" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col">
+                        <label asp-for="ClienteID" class="control-label"></label>
+                        <input asp-for="ClienteID" class="form-control" />
+                        <span asp-validation-for="ClienteID" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DataVenda" class="control-label"></label>
+                    <input asp-for="DataVenda" class="form-control" />
+                    <span asp-validation-for="DataVenda" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TotalVenda" class="control-label"></label>
+                    <input asp-for="TotalVenda" class="form-control" />
+                    <span asp-validation-for="TotalVenda" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MetodoPagamento" class="control-label"></label>
+                    <input asp-for="MetodoPagamento" class="form-control" />
+                    <span asp-validation-for="MetodoPagamento" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="StatusEntrega" class="control-label"></label>
+                    <select asp-for="StatusEntrega" class="form-control" />
                     <option selected>Selecione</option>
                     <option value="Entregue">Entregue</option>
                     <option value="Em transito">Em trânsito</option>
                     <option value="Processando">Processando</option>
                     <option value="Atrasado">Atrasado</option>
                     <option value="Cancelado">Cancelado</option>
-                </select>
-                <span asp-validation-for="StatusEntrega" class="text-danger"></span>
-            </div>
-            <div class="form-group my-3">
-                <input type="submit" value="Adicionar" class="btn btn-primary" />
-            </div>
-        </form>
+                    </select>
+                    <span asp-validation-for="StatusEntrega" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <input type="submit" value="Adicionar" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Voltar a lista</a>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Voltar a lista</a>
-</div>
-
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
