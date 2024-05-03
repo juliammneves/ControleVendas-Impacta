@@ -33,7 +33,11 @@ body {
     color: white;
     height: 225px;
 }
-table, .bloco {
+.tab{
+    margin-top: -4rem !important;
+    border-radius: 20px;
+}
+.bloco {
     margin-top: -4rem !important;
     padding: 20px;
     border-radius: 20px;

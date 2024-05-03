@@ -13,82 +13,85 @@
         </p>
     </div>
 </div>
-<table class="table align-middle container table-light p-5 rounded">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Sobrenome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Telefone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CPF)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cargo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Salario)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Senha)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NivelAcesso)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataContratacao)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+<div class="bg-white align-middle container table-responsive tab">
+    <table class="table align-middle">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Sobrenome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Telefone)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CPF)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Cargo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Salario)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Senha)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NivelAcesso)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DataContratacao)
-                </td>
-                <td>
-                    <a asp-action="Edit" class="btn btn-outline-secondary" asp-route-id="@item.FuncionarioID"><i class="bi bi-pencil-fill"></i></a>
-                    <a asp-action="Details" class="btn btn-outline-info" asp-route-id="@item.FuncionarioID"><i class="bi bi-info-circle"></i></a>
-                    <a asp-action="Delete" class="btn btn-outline-danger" asp-route-id="@item.FuncionarioID"><i class="bi bi-trash3"></i></a>
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sobrenome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Telefone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CPF)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cargo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Salario)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Senha)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NivelAcesso)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataContratacao)
+                </th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sobrenome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telefone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CPF)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cargo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Salario)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Senha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NivelAcesso)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataContratacao)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" class="btn btn-outline-secondary" asp-route-id="@item.FuncionarioID"><i class="bi bi-pencil-fill"></i></a>
+                        <a asp-action="Details" class="btn btn-outline-info" asp-route-id="@item.FuncionarioID"><i class="bi bi-info-circle"></i></a>
+                        <a asp-action="Delete" class="btn btn-outline-danger" asp-route-id="@item.FuncionarioID"><i class="bi bi-trash3"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

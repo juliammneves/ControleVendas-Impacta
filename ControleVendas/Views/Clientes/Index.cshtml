@@ -11,106 +11,109 @@
         </p>
     </div>
 </div>
-<table class="table align-middle container table-light p-5 rounded">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.NivelAcessoID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Sobrenome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Telefone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CPF)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Senha)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Endereco)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Numero)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Complemento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Bairro)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cidade)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Estado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CEP)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+
+<div class="bg-white align-middle container tab table-responsive ">
+    <table class="table table-sm align-middle">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NivelAcessoID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Sobrenome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Telefone)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CPF)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Senha)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Endereco)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Numero)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Complemento)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Bairro)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Cidade)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Estado)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CEP)
-                </td>
-                <td>
-                    <a asp-action="Edit" class="btn btn-outline-secondary" asp-route-id="@item.ClienteID"><i class="bi bi-pencil-fill"></i></a>
-                    <a asp-action="Details" class="btn btn-outline-info my-1" asp-route-id="@item.ClienteID"><i class="bi bi-info-circle"></i></a>
-                    <a asp-action="Delete" class="btn btn-outline-danger" asp-route-id="@item.ClienteID"><i class="bi bi-trash3"></i></a>
-                </td>
+                <th class="col-1">
+                    @Html.DisplayNameFor(model => model.NivelAcessoID)
+                </th>
+                <th class="col-1">
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th class="col-1">
+                    @Html.DisplayNameFor(model => model.Sobrenome)
+                </th>
+                <th class="col-1">
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th class="col-1">
+                    @Html.DisplayNameFor(model => model.Telefone)
+                </th>
+                <th class="col-1">
+                    @Html.DisplayNameFor(model => model.CPF)
+                </th>
+                <th class="col-1">
+                    @Html.DisplayNameFor(model => model.Senha)
+                </th>
+                <th class="col-1">
+                    @Html.DisplayNameFor(model => model.Endereco)
+                </th>
+                <th class="col-1">
+                    @Html.DisplayNameFor(model => model.Numero)
+                </th>
+                <th class="col-1">
+                    @Html.DisplayNameFor(model => model.Complemento)
+                </th>
+                <th class="col-1">
+                    @Html.DisplayNameFor(model => model.Bairro)
+                </th>
+                <th class="col-1">
+                    @Html.DisplayNameFor(model => model.Cidade)
+                </th>
+                <th class="col-1">
+                    @Html.DisplayNameFor(model => model.Estado)
+                </th>
+                <th class="col-1">
+                    @Html.DisplayNameFor(model => model.CEP)
+                </th>
+                <th class="col-1"></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NivelAcessoID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sobrenome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telefone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CPF)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Senha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Endereco)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Numero)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Complemento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Bairro)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cidade)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Estado)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CEP)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" class="btn btn-outline-secondary" asp-route-id="@item.ClienteID"><i class="bi bi-pencil-fill"></i></a>
+                        <a asp-action="Details" class="btn btn-outline-info my-1" asp-route-id="@item.ClienteID"><i class="bi bi-info-circle"></i></a>
+                        <a asp-action="Delete" class="btn btn-outline-danger" asp-route-id="@item.ClienteID"><i class="bi bi-trash3"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

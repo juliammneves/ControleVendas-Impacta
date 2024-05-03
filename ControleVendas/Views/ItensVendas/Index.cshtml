@@ -12,52 +12,54 @@
         </p>
     </div>
 </div>
-<table class=" table align-middle container table-light p-5 rounded">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.VendaID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProdutoID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Quantidade)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PrecoVenda)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Desconto)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+<div class="bg-white align-middle container table-responsive tab">
+    <table class=" table align-middle">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.VendaID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ProdutoID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Quantidade)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PrecoVenda)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Desconto)
-                </td>
-                <td>
-                    <a asp-action="Edit" class="btn btn-outline-secondary" asp-route-id="@item.ItensVendaID"><i class="bi bi-pencil-fill"></i></a>
-                    <a asp-action="Details" class="btn btn-outline-info" asp-route-id="@item.ItensVendaID"><i class="bi bi-info-circle"></i></a>
-                    <a asp-action="Delete" class="btn btn-outline-danger" asp-route-id="@item.ItensVendaID"><i class="bi bi-trash3"></i></a>
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendaID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProdutoID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Quantidade)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PrecoVenda)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Desconto)
+                </th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VendaID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProdutoID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantidade)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PrecoVenda)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Desconto)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" class="btn btn-outline-secondary" asp-route-id="@item.ItensVendaID"><i class="bi bi-pencil-fill"></i></a>
+                        <a asp-action="Details" class="btn btn-outline-info" asp-route-id="@item.ItensVendaID"><i class="bi bi-info-circle"></i></a>
+                        <a asp-action="Delete" class="btn btn-outline-danger" asp-route-id="@item.ItensVendaID"><i class="bi bi-trash3"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

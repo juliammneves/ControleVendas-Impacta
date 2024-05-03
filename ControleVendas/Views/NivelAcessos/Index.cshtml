@@ -13,28 +13,30 @@
         </p>
     </div>
 </div>
-<table class="table align-middle container w-50 table-light p-5 rounded">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nivel)
-            </th>
-            <th class="col-3"></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr class="justify-content-between">
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nivel)
-                </td>
-                <td>
-                    <a asp-action="Edit" class="btn btn-outline-secondary" asp-route-id="@item.NivelAcessoID"><i class="bi bi-pencil-fill"></i></a>
-                    <a asp-action="Details" class="btn btn-outline-info" asp-route-id="@item.NivelAcessoID"><i class="bi bi-info-circle"></i></a>
-                    <a asp-action="Delete" class="btn btn-outline-danger" asp-route-id="@item.NivelAcessoID"><i class="bi bi-trash3"></i></a>
-                </td>
+<div class="bg-white align-middle w-50 container table-responsive tab">
+    <table class="table align-middle">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nivel)
+                </th>
+                <th class="col-3"></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="justify-content-between">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nivel)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" class="btn btn-outline-secondary" asp-route-id="@item.NivelAcessoID"><i class="bi bi-pencil-fill"></i></a>
+                        <a asp-action="Details" class="btn btn-outline-info" asp-route-id="@item.NivelAcessoID"><i class="bi bi-info-circle"></i></a>
+                        <a asp-action="Delete" class="btn btn-outline-danger" asp-route-id="@item.NivelAcessoID"><i class="bi bi-trash3"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
